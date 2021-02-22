@@ -16,15 +16,10 @@ char *word_start(char *str){
   char *c = str;
 
   while(space_char(*c) && *c != '\0'){
-
-    c++
-    
+    c++;  
   }
-
-  if (*c == '\0'){
-    return 0;}
+  
   return c;
-
 }
 
 char *word_end(char *str){
@@ -33,16 +28,22 @@ char *word_end(char *str){
   while(non_space_char(*c) && *c != '\0'){
     c++;
 }
-  if(*c=='\0'){
-    return 0;
-  }
   return c;
 }
 
 
-int count_words(){
-  char *c =str;
-  
+int count_words(char *str){
+  int count = 0;
+
+  if(non_space_char(*str)){
+    count++;
+  }
+  while(*str != '\0'){
+    str = word_start(str);
+    count++;
+  }
+  count--;
+  return count;
 }
 
 
