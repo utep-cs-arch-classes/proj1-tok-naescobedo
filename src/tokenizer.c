@@ -45,5 +45,29 @@ int count_words(char *str){
   count--;
   return count;
 }
+/* Milestone 2*/
+char *copy_str (char *src, short len){
+  char *new_src =(char *)malloc(len +1);
 
+  int i;
+  for(i=0; i<len; i++){
+    *(new_src + i) =*(src+i);
+  }
+  return new_src;
 
+  }
+void print_tokens(char** str){
+  int i = 0;
+  
+  while(str[i] != '\0'){
+    printf("%s\n", str[i]);
+    i++;
+  }
+  void free_tokens(char **str){
+    int i =0;
+    while (str[i] != '\0'){
+      free(str[i]);
+}
+    free(str);
+}
+ 
