@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "history.h"
+#include "tokenizer.h"
 
 void gui(){
   
@@ -11,12 +14,15 @@ void gui(){
       x++;
       putchar(i);
   }
+    char **tokens;
     input[i] = '\0';
     printf("\n%c\n", *word_start(input));
     printf("\n%c\n", *word_end(input));
     printf("\n%i\n", count_words(input));
-
+    tokens = tokenize(input);
+    print_tokens(tokens);
   }
 void main(){
   gui();
 }
+
