@@ -1,12 +1,14 @@
 Project 1: Tokenizer
 ====================
-# Instructions:
+Nestor Escobedo  
+This project is a tokenizer that lets the user input strings and allows them
+to view the tokens generated of the string provided, it also allows the user
+to keep a history record of the strings which were input.
 
-You should document your tokenizer in this file.
+The project uses three main files to handle the strings and history:
+-Tokenize.c
+-history.c
+-gui.c
 
-This file is written in the refreshingly simple `markdown` text
-formatting language.
-
-To learn about text formatting using markdown, we encourage you to examine 
- - [../README.md](../README.md)
- - the online [Markdown Guide](https://www.markdownguide.org/).
+When the project is run with the "make project" command the user will see a ">"
+sign so he can input the strings.
